@@ -12,9 +12,9 @@ def app(request):
 
 
 def test_send_mail(app):
-    app.login(username="katieden", password="rjnktnrf.12ml")
+    app.session.login(username="katieden", password="rjnktnrf.12ml")
     app.send_mail(Mail(address="katieden7@gmail.com", subject="hello2"))
-    app.logout()
+    app.session.logout()
 
 
 
