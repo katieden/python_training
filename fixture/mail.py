@@ -19,3 +19,8 @@ class MailHelper:
         # send mail
         driver.find_element_by_xpath("//div[2]/div/span/span/span").click()
         driver.find_element_by_xpath("//div[16]/div/div/div[2]/button/span").click()
+
+    def delete(self):
+        driver = self.app.driver
+        driver.find_element_by_xpath("//div[@id='app-canvas']/div/div/div/div/div[2]/span/div[2]/div/div/div/div/div/div/div/div/div/a/div[4]/div/div[3]/span/span").click()
+        driver.find_element_by_xpath("//div[@id='app-canvas']/div/div/div/div/div/span/div[2]/table/tbody/tr/td/div/div/span/span/span[2]").click()
