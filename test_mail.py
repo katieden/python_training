@@ -12,16 +12,16 @@ class test_mail(unittest.TestCase):
         self.verificationErrors = []
 
     def test_send_mail(self):
-        driver = self.driver
-        self.open_url(driver)
-        self.login(driver, username="katieden", password="rjnktnrf.12ml")
-        self.send_mail(driver, Mail(address="katieden7@gmail.com", subject="hello2"))
-        self.logout(driver)
+        self.login(username="katieden", password="rjnktnrf.12ml")
+        self.send_mail(Mail(address="katieden7@gmail.com", subject="hello2"))
+        self.logout()
 
-    def logout(self, driver):
+    def logout(self):
+        driver = self.driver
         driver.find_element_by_id("PH_logoutLink").click()
 
-    def send_mail(self, driver, mail):
+    def send_mail(self, mail):
+        driver = self.driver
         # open create mail
         driver.find_element_by_xpath(
             "//div[@id='app-canvas']/div/div/div/div/div[2]/span/div/div/div/div/div/div/div/div/a/span/span").click()
@@ -37,7 +37,9 @@ class test_mail(unittest.TestCase):
         driver.find_element_by_xpath("//div[2]/div/span/span/span").click()
         driver.find_element_by_xpath("//div[16]/div/div/div[2]/button/span").click()
 
-    def login(self, driver, username, password):
+    def login(self, username, password):
+        driver = self.driver
+        self.open_url()
         driver.find_element_by_name("login").click()
         driver.find_element_by_name("login").clear()
         driver.find_element_by_name("login").send_keys(username)
@@ -47,7 +49,8 @@ class test_mail(unittest.TestCase):
         driver.find_element_by_name("password").send_keys(password)
         driver.find_element_by_xpath("(//button[@type='button'])[2]").click()
 
-    def open_url(self, driver):
+    def open_url(self):
+        driver = self.driver
         driver.get("https://mail.ru/?from=logout")
 
     def tearDown(self):
