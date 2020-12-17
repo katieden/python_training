@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import pytest
-from mail import Mail
-from application import Application
+from model.mail import Mail
+from fixture.application import Application
 
 
 @pytest.fixture
