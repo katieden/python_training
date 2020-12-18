@@ -18,3 +18,23 @@ class SessionHelper:
     def logout(self):
         driver = self.app.driver
         driver.find_element_by_id("PH_logoutLink").click()
+
+    def ensure_logout(self):
+        if self.is_logged_in():
+            self.logout()
+
+    def ensure_login(self, username, password):
+        if self.is_logged_in():
+            if self.is_logged_in_as(username):
+                return
+        else:
+            self.logout()
+        self.login(username, password)
+
+    def is_logged_in(self):
+        driver = self.app.driver
+        return len(driver.find_element_by_id("PH_logoutLink")) > 0
+
+    def is_logged_in_as(self, username):
+        driver = self.app.driver
+        return driver.find_element_by_id("PH_user-email").text == username+"@mail.ru"

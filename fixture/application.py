@@ -11,6 +11,14 @@ class Application:
         self.session = SessionHelper(self)
         self.mail = MailHelper(self)
 
+    def is_valid(self):
+        driver = self.driver
+        try:
+            driver.current_url()
+            return True
+        except:
+            return False
+
     def open_url(self):
         driver = self.driver
         driver.get("https://mail.ru/?from=logout")
