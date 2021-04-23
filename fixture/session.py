@@ -34,7 +34,7 @@ class SessionHelper:
     def is_logged_in(self):
         driver = self.app.driver
         return len(driver.find_element_by_id("PH_logoutLink")) > 0
-
+# krfl;re2342
     def is_logged_in_as(self, username):
         driver = self.app.driver
         return driver.find_element_by_id("PH_user-email").text == username+"@mail.ru"

@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3011e6e-fb2a-437c-85a9-e38a49c6903c" name="Default Changelist" comment="" />
+    <list default="true" id="a3011e6e-fb2a-437c-85a9-e38a49c6903c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/fixture/mail.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/mail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture/session.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/session.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

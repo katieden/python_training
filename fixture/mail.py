@@ -8,7 +8,7 @@ class MailHelper:
         # open create mail
         driver.find_element_by_xpath(
             "//div[@id='app-canvas']/div/div/div/div/div[2]/span/div/div/div/div/div/div/div/div/a/span/span").click()
-        # fill To field
+        # fill To field2342
         driver.find_element_by_xpath("(//input[@value=''])[2]").click()
         driver.find_element_by_xpath("(//input[@value=''])[2]").clear()
         driver.find_element_by_xpath("(//input[@value=''])[2]").send_keys(mail.address)
@@ -19,7 +19,7 @@ class MailHelper:
         # send mail
         driver.find_element_by_xpath("//div[2]/div/span/span/span").click()
         driver.find_element_by_xpath("//div[16]/div/div/div[2]/button/span").click()
-
+# rejklt34242
     def delete(self):
         driver = self.app.driver
         driver.find_element_by_xpath("//div[@id='app-canvas']/div/div/div/div/div[2]/span/div[2]/div/div/div/div/div/div/div/div/div/a/div[4]/div/div[3]/span/span").click()
